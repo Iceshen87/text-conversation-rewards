@@ -2,7 +2,10 @@
   "name": "@ubiquity-os/text-conversation-rewards",
   "short_name": "ubiquity-os-marketplace/text-conversation-rewards@feat/320-workflow-artifact-migration-conversation-rewards",
   "description": "Generate rewards for on topic conversation for closing issues as complete.",
-  "ubiquity:listeners": ["issues.closed", "pull_request.closed"],
+  "ubiquity:listeners": [
+    "issues.closed",
+    "pull_request.closed"
+  ],
   "skipBotEvents": false,
   "configuration": {
     "default": {},
@@ -17,12 +20,16 @@
               "evmNetworkId": {
                 "default": 100,
                 "description": "Network ID to run in, default to 100",
-                "examples": ["100"],
+                "examples": [
+                  "100"
+                ],
                 "type": "number"
               },
               "evmPrivateEncrypted": {
                 "description": "The encrypted Ethereum private key to use for funding rewards.",
-                "examples": ["0x000..."],
+                "examples": [
+                  "0x000..."
+                ],
                 "type": "string"
               },
               "erc20RewardToken": {
@@ -30,7 +37,9 @@
                 "type": "string"
               }
             },
-            "required": ["evmPrivateEncrypted"]
+            "required": [
+              "evmPrivateEncrypted"
+            ]
           },
           {
             "additionalProperties": false,
@@ -44,12 +53,16 @@
                   "evmNetworkId": {
                     "default": 100,
                     "description": "Network ID to run in, default to 100",
-                    "examples": ["100"],
+                    "examples": [
+                      "100"
+                    ],
                     "type": "number"
                   },
                   "evmPrivateEncrypted": {
                     "description": "The encrypted Ethereum private key to use for funding rewards.",
-                    "examples": ["0x000..."],
+                    "examples": [
+                      "0x000..."
+                    ],
                     "type": "string"
                   },
                   "erc20RewardToken": {
@@ -57,7 +70,9 @@
                     "type": "string"
                   }
                 },
-                "required": ["evmPrivateEncrypted"]
+                "required": [
+                  "evmPrivateEncrypted"
+                ]
               },
               "collaborator": {
                 "additionalProperties": false,
@@ -66,12 +81,16 @@
                   "evmNetworkId": {
                     "default": 100,
                     "description": "Network ID to run in, default to 100",
-                    "examples": ["100"],
+                    "examples": [
+                      "100"
+                    ],
                     "type": "number"
                   },
                   "evmPrivateEncrypted": {
                     "description": "The encrypted Ethereum private key to use for funding rewards.",
-                    "examples": ["0x000..."],
+                    "examples": [
+                      "0x000..."
+                    ],
                     "type": "string"
                   },
                   "erc20RewardToken": {
@@ -79,7 +98,9 @@
                     "type": "string"
                   }
                 },
-                "required": ["evmPrivateEncrypted"]
+                "required": [
+                  "evmPrivateEncrypted"
+                ]
               },
               "contributor": {
                 "additionalProperties": false,
@@ -88,12 +109,16 @@
                   "evmNetworkId": {
                     "default": 100,
                     "description": "Network ID to run in, default to 100",
-                    "examples": ["100"],
+                    "examples": [
+                      "100"
+                    ],
                     "type": "number"
                   },
                   "evmPrivateEncrypted": {
                     "description": "The encrypted Ethereum private key to use for funding rewards.",
-                    "examples": ["0x000..."],
+                    "examples": [
+                      "0x000..."
+                    ],
                     "type": "string"
                   },
                   "erc20RewardToken": {
@@ -101,7 +126,9 @@
                     "type": "string"
                   }
                 },
-                "required": ["evmPrivateEncrypted"]
+                "required": [
+                  "evmPrivateEncrypted"
+                ]
               },
               "billingManager": {
                 "additionalProperties": false,
@@ -110,12 +137,16 @@
                   "evmNetworkId": {
                     "default": 100,
                     "description": "Network ID to run in, default to 100",
-                    "examples": ["100"],
+                    "examples": [
+                      "100"
+                    ],
                     "type": "number"
                   },
                   "evmPrivateEncrypted": {
                     "description": "The encrypted Ethereum private key to use for funding rewards.",
-                    "examples": ["0x000..."],
+                    "examples": [
+                      "0x000..."
+                    ],
                     "type": "string"
                   },
                   "erc20RewardToken": {
@@ -123,7 +154,9 @@
                     "type": "string"
                   }
                 },
-                "required": ["evmPrivateEncrypted"]
+                "required": [
+                  "evmPrivateEncrypted"
+                ]
               }
             },
             "default": {}
@@ -157,7 +190,9 @@
           },
           "file": {
             "description": "Specify a file to write the results in",
-            "examples": ["./result.json"],
+            "examples": [
+              "./result.json"
+            ],
             "type": "string"
           },
           "requirePriceLabel": {
@@ -188,18 +223,26 @@
                       "tokenCountLimit": {
                         "default": 124000,
                         "description": "Token count limit used when truncating prompt content before evaluation. If the content goes beyond the token limit, it will get truncated during evaluation.",
-                        "examples": [124000],
+                        "examples": [
+                          124000
+                        ],
                         "type": "integer"
                       },
                       "maxRetries": {
                         "default": 10,
                         "description": "Maximum number of retries to make",
-                        "examples": [10],
+                        "examples": [
+                          10
+                        ],
                         "type": "number"
                       },
                       "reasoningEffort": {
                         "description": "Reasoning effort level for reasoning-capable models.",
-                        "examples": ["medium", "low", "high"],
+                        "examples": [
+                          "medium",
+                          "low",
+                          "high"
+                        ],
                         "default": "low",
                         "anyOf": [
                           {
@@ -235,13 +278,21 @@
                     "description": "Percentage of reward given to original comment author when detected via 'Originally posted by' pattern. Value between 0.0 and 1.0.",
                     "minimum": 0,
                     "maximum": 1,
-                    "examples": [0.5, 0.22, 0.79, 0, 1],
+                    "examples": [
+                      0.5,
+                      0.22,
+                      0.79,
+                      0,
+                      1
+                    ],
                     "type": "number"
                   },
                   "multipliers": {
                     "default": [
                       {
-                        "role": ["ISSUE_SPECIFICATION"],
+                        "role": [
+                          "ISSUE_SPECIFICATION"
+                        ],
                         "relevance": 1
                       }
                     ],
@@ -252,7 +303,9 @@
                       "properties": {
                         "role": {
                           "description": "Roles that this multiplier applies to",
-                          "examples": ["[\"PULL_ASSIGNEE\", \"PULL_AUTHOR\", \"PULL_COLLABORATOR\"]"],
+                          "examples": [
+                            "[\"PULL_ASSIGNEE\", \"PULL_AUTHOR\", \"PULL_COLLABORATOR\"]"
+                          ],
                           "type": "array",
                           "items": {
                             "anyOf": [
@@ -421,11 +474,15 @@
                         },
                         "relevance": {
                           "description": "Relevance multiplier for this role",
-                          "examples": ["2"],
+                          "examples": [
+                            "2"
+                          ],
                           "type": "number"
                         }
                       },
-                      "required": ["role"]
+                      "required": [
+                        "role"
+                      ]
                     }
                   }
                 }
@@ -462,7 +519,11 @@
                   "skipCommentsWhileAssigned": {
                     "default": "all",
                     "description": "Configures how user comments are included in the rewards calculation when they are assigned to a GitHub issue:\n\n- 'all': Excludes all comments made between the first assignment start and the last assignment end, discouraging gaming by un-assigning and commenting for rewards.\n- 'exact': Excludes only comments made during precise assignment periods, targeting times when the user is actively assigned.\n- 'none': Includes all comments, regardless of assignment status or timing.",
-                    "examples": ["all", "exact", "none"],
+                    "examples": [
+                      "all",
+                      "exact",
+                      "none"
+                    ],
                     "anyOf": [
                       {
                         "const": "all",
@@ -527,7 +588,9 @@
                     "default": 100,
                     "exclusiveMinimum": 0,
                     "description": "The amount of lines simplified to be credited 1$ of incentive",
-                    "examples": ["100"],
+                    "examples": [
+                      "100"
+                    ],
                     "type": "number"
                   }
                 }
@@ -569,7 +632,9 @@
                     "description": "Multipliers applied to different parts of the comment according the role of the author",
                     "default": [
                       {
-                        "role": ["ISSUE_SPECIFICATION"],
+                        "role": [
+                          "ISSUE_SPECIFICATION"
+                        ],
                         "multiplier": 1,
                         "rewards": {
                           "wordValue": 0.1,
@@ -674,7 +739,9 @@
                         }
                       },
                       {
-                        "role": ["ISSUE_AUTHOR"],
+                        "role": [
+                          "ISSUE_AUTHOR"
+                        ],
                         "multiplier": 1,
                         "rewards": {
                           "wordValue": 0.2,
@@ -779,7 +846,9 @@
                         }
                       },
                       {
-                        "role": ["ISSUE_ASSIGNEE"],
+                        "role": [
+                          "ISSUE_ASSIGNEE"
+                        ],
                         "multiplier": 1,
                         "rewards": {
                           "wordValue": 0.1,
@@ -884,7 +953,9 @@
                         }
                       },
                       {
-                        "role": ["ISSUE_COLLABORATOR"],
+                        "role": [
+                          "ISSUE_COLLABORATOR"
+                        ],
                         "multiplier": 1,
                         "rewards": {
                           "wordValue": 0.1,
@@ -989,7 +1060,9 @@
                         }
                       },
                       {
-                        "role": ["ISSUE_CONTRIBUTOR"],
+                        "role": [
+                          "ISSUE_CONTRIBUTOR"
+                        ],
                         "multiplier": 0.25,
                         "rewards": {
                           "wordValue": 0.1,
@@ -1094,7 +1167,9 @@
                         }
                       },
                       {
-                        "role": ["PULL_SPECIFICATION"],
+                        "role": [
+                          "PULL_SPECIFICATION"
+                        ],
                         "multiplier": 0,
                         "rewards": {
                           "wordValue": 0,
@@ -1199,7 +1274,9 @@
                         }
                       },
                       {
-                        "role": ["PULL_AUTHOR"],
+                        "role": [
+                          "PULL_AUTHOR"
+                        ],
                         "multiplier": 0,
                         "rewards": {
                           "wordValue": 0.2,
@@ -1304,7 +1381,9 @@
                         }
                       },
                       {
-                        "role": ["PULL_ASSIGNEE"],
+                        "role": [
+                          "PULL_ASSIGNEE"
+                        ],
                         "multiplier": 1,
                         "rewards": {
                           "wordValue": 0.1,
@@ -1409,7 +1488,9 @@
                         }
                       },
                       {
-                        "role": ["PULL_COLLABORATOR"],
+                        "role": [
+                          "PULL_COLLABORATOR"
+                        ],
                         "multiplier": 1,
                         "rewards": {
                           "wordValue": 0.1,
@@ -1514,7 +1595,9 @@
                         }
                       },
                       {
-                        "role": ["PULL_CONTRIBUTOR"],
+                        "role": [
+                          "PULL_CONTRIBUTOR"
+                        ],
                         "multiplier": 0.25,
                         "rewards": {
                           "wordValue": 0.1,
@@ -1626,7 +1709,9 @@
                         "role": {
                           "minItems": 1,
                           "description": "The list of roles this multiplier applies to",
-                          "examples": ["[\"PULL_ASSIGNEE\", \"PULL_AUTHOR\", \"PULL_COLLABORATOR\"]"],
+                          "examples": [
+                            "[\"PULL_ASSIGNEE\", \"PULL_AUTHOR\", \"PULL_COLLABORATOR\"]"
+                          ],
                           "type": "array",
                           "items": {
                             "anyOf": [
@@ -1794,7 +1879,9 @@
                           }
                         },
                         "multiplier": {
-                          "examples": ["1"],
+                          "examples": [
+                            "1"
+                          ],
                           "description": "Multiplier for the given list of roles",
                           "type": "number"
                         },
@@ -1909,7 +1996,9 @@
                                   "properties": {
                                     "score": {
                                       "description": "Score per word in the entity",
-                                      "examples": ["0.1"],
+                                      "examples": [
+                                        "0.1"
+                                      ],
                                       "type": "number"
                                     },
                                     "countWords": {
@@ -1918,7 +2007,9 @@
                                       "type": "boolean"
                                     }
                                   },
-                                  "required": ["score"]
+                                  "required": [
+                                    "score"
+                                  ]
                                 }
                               }
                             },
@@ -1930,13 +2021,18 @@
                           }
                         }
                       },
-                      "required": ["role", "multiplier"]
+                      "required": [
+                        "role",
+                        "multiplier"
+                      ]
                     }
                   },
                   "wordCountExponent": {
                     "default": 0.85,
                     "description": "Exponent applied to the word count total",
-                    "examples": ["0.85"],
+                    "examples": [
+                      "0.85"
+                    ],
                     "type": "number"
                   }
                 }
@@ -1990,7 +2086,12 @@
             ]
           },
           "specialUsers": {
-            "default": [["Copilot", "copilot-swe-agent"]],
+            "default": [
+              [
+                "Copilot",
+                "copilot-swe-agent"
+              ]
+            ],
             "description": "Optional alias groups for users whose logins should be treated as interchangeable when validating linked pull requests. Use this when a contributor appears under one login on the issue and another on the pull request, but they represent the same special user.",
             "type": "array",
             "items": {
@@ -2000,7 +2101,10 @@
               "items": {
                 "minLength": 1,
                 "description": "GitHub login treated as equivalent to the other members of the same group when matching issue assignees to pull request authors.",
-                "examples": ["Copilot", "copilot-swe-agent"],
+                "examples": [
+                  "Copilot",
+                  "copilot-swe-agent"
+                ],
                 "type": "string"
               }
             }
@@ -2019,18 +2123,26 @@
                       "tokenCountLimit": {
                         "default": 124000,
                         "description": "Token count limit used when truncating prompt content before evaluation. If the content goes beyond the token limit, it will get truncated during evaluation.",
-                        "examples": [124000],
+                        "examples": [
+                          124000
+                        ],
                         "type": "integer"
                       },
                       "maxRetries": {
                         "default": 10,
                         "description": "Maximum number of retries to make",
-                        "examples": [10],
+                        "examples": [
+                          10
+                        ],
                         "type": "number"
                       },
                       "reasoningEffort": {
                         "description": "Reasoning effort level for reasoning-capable models.",
-                        "examples": ["medium", "low", "high"],
+                        "examples": [
+                          "medium",
+                          "low",
+                          "high"
+                        ],
                         "default": "low",
                         "anyOf": [
                           {
@@ -2068,18 +2180,26 @@
                       "tokenCountLimit": {
                         "default": 124000,
                         "description": "Token count limit used when truncating prompt content before evaluation. If the content goes beyond the token limit, it will get truncated during evaluation.",
-                        "examples": [124000],
+                        "examples": [
+                          124000
+                        ],
                         "type": "integer"
                       },
                       "maxRetries": {
                         "default": 10,
                         "description": "Maximum number of retries to make",
-                        "examples": [10],
+                        "examples": [
+                          10
+                        ],
                         "type": "number"
                       },
                       "reasoningEffort": {
                         "description": "Reasoning effort level for reasoning-capable models.",
-                        "examples": ["medium", "low", "high"],
+                        "examples": [
+                          "medium",
+                          "low",
+                          "high"
+                        ],
                         "default": "low",
                         "anyOf": [
                           {
@@ -2127,14 +2247,18 @@
             "default": 10,
             "minimum": 1,
             "description": "The maximum amount of retries on failure",
-            "examples": ["10"],
+            "examples": [
+              "10"
+            ],
             "type": "number"
           },
           "delayMs": {
             "default": 1000,
             "minimum": 100,
             "description": "The delay between each retry, in milliseconds",
-            "examples": ["1000"],
+            "examples": [
+              "1000"
+            ],
             "type": "number"
           }
         }
