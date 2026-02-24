@@ -4,9 +4,10 @@
   "description": "Generate rewards for on topic conversation for closing issues as complete.",
   "ubiquity:listeners": [
     "issues.closed",
+    "issue_comment.created",
     "pull_request.closed"
   ],
-  "skipBotEvents": false,
+  "skipBotEvents": true,
   "configuration": {
     "default": {},
     "type": "object",
